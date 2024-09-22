@@ -5,7 +5,7 @@
  * except in compliance with the Server Side Public License, v 1.
  */
 
-package io.trino.plugin.trino.cluster;
+package com.datastrato.trino.connector.cluster;
 
 import com.github.dockerjava.api.model.ExposedPort;
 import com.github.dockerjava.api.model.HostConfig;

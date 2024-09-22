@@ -4,7 +4,7 @@
  * Licensed under the Server Side Public License, v 1. You may not use this file
  * except in compliance with the Server Side Public License, v 1.
  */
-package io.trino.plugin.trino.cluster;
+package com.datastrato.trino.connector.cluster;
 
 import com.google.inject.Binder;
 import com.google.inject.Provides;
