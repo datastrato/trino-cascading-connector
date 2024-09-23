@@ -11,6 +11,14 @@ This project is licensed under the Server Side Public License, v 1. You may not 
 
 https://www.mongodb.com/licensing/server-side-public-license
 
+## Build
+Build the plugin with the following command:
+
+```bash
+mvn package -DskipTests
+```
+
+
 ## Connection Confiuration
 Create new properties file like <catalog-name>.properties inside etc/catalog dir:
 
