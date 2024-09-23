@@ -19,7 +19,7 @@ mvn package -DskipTests
 ```
 
 
-## Connection Confiuration
+## Connection Configuration
 Create new properties file like <catalog-name>.properties inside etc/catalog dir:
 
 ```text
