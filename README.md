@@ -1,15 +1,14 @@
 # Trino Plugin
 
-This project is licensed under the Server Side Public License (SSPL), v 1. See the [LICENSE](./LICENSE) file for details.
+![](maven/cluster.jpg)
 
 This is a plugin for Trino that allows you to connect to multiple Trino clusters and query data located in other Trino clusters.
 
 Notice that it only supports the SELECT queries.
 
 ## License
-This project is licensed under the Server Side Public License, v 1. You may not use this file except in compliance with the License. You may obtain a copy of the License at:
 
-https://www.mongodb.com/licensing/server-side-public-license
+This project is licensed under the Server Side Public License (SSPL), v 1. See the [LICENSE](./LICENSE) file for details.
 
 ## Build
 Build the plugin with the following command:
