@@ -17,7 +17,7 @@ Build the plugin with the following command:
 mvn package -DskipTests
 ```
 
-The package of the plugin will be created in the `target/pacage` directory.
+The package of the plugin will be created in the `target/package` directory.
 Install the plugin by unpacking the package and then copying the directory to the plugin directory of Trino.
 
 ## Connection Configuration
