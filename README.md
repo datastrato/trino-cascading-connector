@@ -23,7 +23,9 @@ Create new properties file like <catalog-name>.properties inside etc/catalog dir
 
 ```text
 connector.name=trino
-connection-url=jdbc:trino://ip:port
+connection-url=jdbc:trino://{ip}:{port}/{catalogname}
 connection-user=my_user
 connection-password=my_password
 ```
+
+The `connection-url` is the URL of the the Trino cluster, need to contain the catalog name.
