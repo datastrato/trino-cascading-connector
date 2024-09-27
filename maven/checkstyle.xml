@@ -75,12 +75,6 @@ This file is based on the checkstyle file of Apache Beam.
 			<property name="checkFormat" value="$1"/>
 		</module>
 
-		<!--
-
-		FLINK CUSTOM CHECKS
-
-		-->
-
 		<!-- Prohibit T.getT() methods for standard boxed types -->
 		<module name="Regexp">
 			<property name="format" value="Boolean\.getBoolean"/>
@@ -100,39 +94,12 @@ This file is based on the checkstyle file of Apache Beam.
 			<property name="message" value="Use System.getProperties() to get system properties."/>
 		</module>
 
-		<!--
-
-		IllegalImport cannot blacklist classes so we have to fall back to Regexp.
-
-		-->
-
 		<!-- forbid use of commons lang validate -->
 		<module name="Regexp">
 			<property name="format" value="org\.apache\.commons\.lang3\.Validate"/>
 			<property name="illegalPattern" value="true"/>
 			<property name="message"
 					  value="Use Guava Checks instead of Commons Validate. Please refer to the coding guidelines."/>
-		</module>
-		<!-- forbid the use of com.google.common.annotations.VisibleForTesting -->
-		<module name="Regexp">
-			<property name="format"
-					  value="import com\.google\.common\.annotations\.VisibleForTesting"/>
-			<property name="illegalPattern" value="true"/>
-			<property name="message"
-					  value="Use Flink's VisibleForTesting instead of Guava's VisibleForTesting"/>
-		</module>
-		<!-- forbid the use of org.apache.commons.lang.SerializationUtils -->
-		<module name="Regexp">
-			<property name="format" value="org\.apache\.commons\.lang\.SerializationUtils"/>
-			<property name="illegalPattern" value="true"/>
-			<property name="message"
-					  value="Use Flink's InstantiationUtil instead of common's SerializationUtils"/>
-		</module>
-		<module name="Regexp">
-			<property name="format" value="org\.apache\.commons\.lang3\.SerializationUtils"/>
-			<property name="illegalPattern" value="true"/>
-			<property name="message"
-					  value="Use Flink's InstantiationUtil instead of common's SerializationUtils"/>
 		</module>
 		<module name="Regexp">
 			<property name="format" value="org\.apache\.commons\.lang\."/>
@@ -153,12 +120,6 @@ This file is based on the checkstyle file of Apache Beam.
 			<property name="format" value="(FIXME)|(XXX)|(@author)"/>
 		</module>
 
-		<!--
-
-		IMPORT CHECKS
-
-		-->
-
 		<module name="IllegalImport">
 			<property name="illegalPkgs" value="com.google.common"/>
 			<message key="import.illegal" value="{0}; Use paimon-shaded-guava instead."/>
@@ -171,19 +132,6 @@ This file is based on the checkstyle file of Apache Beam.
 					 value="Redundant import {0}."/>
 		</module>
 
-		<module name="ImportOrder">
-			<!-- Checks for out of order import statements. -->
-			<property name="severity" value="error"/>
-			<property name="groups"
-					  value="org.apache.paimon,org.apache.paimon.shaded,*,javax,java,scala"/>
-			<property name="separated" value="true"/>
-			<property name="sortStaticImportsAlphabetically" value="true"/>
-			<property name="option" value="bottom"/>
-			<property name="tokens" value="STATIC_IMPORT, IMPORT"/>
-			<message key="import.ordering"
-					 value="Import {0} appears after other imports that it should precede"/>
-		</module>
-
 		<module name="AvoidStarImport">
 			<property name="severity" value="error"/>
 		</module>
@@ -191,18 +139,6 @@ This file is based on the checkstyle file of Apache Beam.
 		<module name="IllegalImport">
 			<property name="illegalPkgs"
 					  value="autovalue.shaded, avro.shaded, com.google.api.client.repackaged, com.google.appengine.repackaged"/>
-		</module>
-		<module name="IllegalImport">
-			<property name="illegalPkgs" value="org.codehaus.jackson"/>
-			<message key="import.illegal" value="{0}; Use flink-shaded-jackson instead."/>
-		</module>
-		<module name="IllegalImport">
-			<property name="illegalPkgs" value="org.objectweb.asm"/>
-			<message key="import.illegal" value="{0}; Use flink-shaded-asm instead."/>
-		</module>
-		<module name="IllegalImport">
-			<property name="illegalPkgs" value="io.netty"/>
-			<message key="import.illegal" value="{0}; Use flink-shaded-netty instead."/>
 		</module>
 
 		<module name="RedundantModifier">

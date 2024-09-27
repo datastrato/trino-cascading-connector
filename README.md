@@ -1,6 +1,6 @@
 # Trino Plugin
 
-![](maven/cluster.jpg)
+![](docs/assets/cluster.jpg)
 
 This is a plugin for Trino that allows you to connect to multiple Trino clusters and query data located in other Trino clusters.
 
