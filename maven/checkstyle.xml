@@ -55,12 +55,6 @@ This file is based on the checkstyle file of Apache Beam.
 	<!-- Check that every module has a package-info.java -->
 	<!--<module name="JavadocPackage"/>-->
 
-	<!--
-
-	FLINK CUSTOM CHECKS
-
-	-->
-
 	<module name="FileLength">
 		<property name="max" value="3000"/>
 	</module>
